@@ -1,9 +1,9 @@
 {
-    "name": "aurora-launcher-app",
-    "version": "0.0.4",
+    "name": "UnderTech",
+    "version": "0.0.1",
     "description": "Launcher for Minecraft",
     "main": "build/main/index.js",
-    "private": true,
+    "private": false,
     "scripts": {
         "dev": "concurrently -i -n electron,main,preload,renderer -c cyan.bold,blue.bold,yellow.bold,magenta.bold \"npm:start:dev\" \"npm:build:main -- --watch --sourcemap=inline\" \"npm:build:preload -- --watch --sourcemap=inline\" \"vite\"",
         "build": "concurrently -n main,preload,renderer -c blue.bold,yellow.bold,magenta.bold \"npm:build:main\" \"npm:build:preload\" \"npm:build:renderer\" --kill-others-on-fail",
